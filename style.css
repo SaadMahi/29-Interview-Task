@@ -54,6 +54,7 @@ body {
   background-color: rgb(210, 91, 112);
 
   transform: translateX(-10px) rotate(-45deg);
+  display: inline-block;
 }
 
 /* container two */
