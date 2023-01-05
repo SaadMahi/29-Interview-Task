@@ -23,139 +23,65 @@ body {
   gap: 30px;
 }
 
-.container-one {
-  background-color: rgb(210, 91, 112);
-  position: relative;
+.mini {
+  background: rgb(217, 217, 217);
 
-  overflow: hidden;
-}
-/* Top left */
-.top-left {
   width: 100px;
   height: 50px;
 
-  background: rgb(217, 217, 217);
-
   position: absolute;
-  bottom: 0;
-  right: 0;
-
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-
-  overflow: hidden;
 }
 
-.top-left::before {
-  content: "";
-  width: 50px;
-  height: 100px;
-  display: block;
+.container {
   background-color: rgb(210, 91, 112);
 
-  transform: translateX(-10px) rotate(-45deg);
-  display: inline-block;
-}
-
-/* container two */
-.container-two {
-  background-color: rgb(210, 91, 112);
-  position: relative;
-}
-
-.top-right {
-  width: 100px;
-  height: 50px;
-
-  background: rgb(217, 217, 217);
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-
-  overflow: hidden;
-}
-
-.top-right::before {
-  content: "";
-  width: 50px;
-  height: 100px;
-  display: block;
-  background-color: rgb(210, 91, 112);
-
-  transform: translateX(60px) rotate(45deg);
-}
-
-/* container-three */
-.container-three {
-  background-color: rgb(210, 91, 112);
   position: relative;
 
   overflow: hidden;
 }
 
+.top-left,
 .bottom-left {
-  width: 100px;
-  height: 50px;
-
-  background: rgb(217, 217, 217);
-
-  position: absolute;
-  top: 0;
-  right: 0;
-
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 
-  transform: rotateX(180deg);
-
-  overflow: hidden;
+  bottom: 0;
+  right: 0;
 }
 
-.bottom-left::before {
-  content: "";
-  width: 50px;
-  height: 100px;
-  display: block;
-  background-color: rgb(210, 91, 112);
-
-  transform: translateX(-10px) rotate(-45deg);
-}
-
-/* container-four */
-.container-four {
-  position: relative;
-
-  overflow: hidden;
-}
-
+.top-right,
 .bottom-right {
-  width: 100px;
-  height: 50px;
-
-  background: rgb(217, 217, 217);
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 
-  transform: rotateX(180deg);
-
-  overflow: hidden;
+  left: 0;
+  bottom: 0;
 }
 
+.bottom-right,
+.bottom-left {
+  top: 0;
+
+  transform: rotateX(180deg);
+}
+
+.top-left::before,
+.top-right::before,
+.bottom-left::before,
 .bottom-right::before {
   content: "";
   width: 50px;
   height: 100px;
   display: block;
   background-color: rgb(210, 91, 112);
+}
 
+.top-left::before,
+.bottom-left::before {
+  transform: translateX(-10px) rotate(-45deg);
+}
+
+.top-right::before,
+.bottom-right::before {
   transform: translateX(60px) rotate(45deg);
 }
